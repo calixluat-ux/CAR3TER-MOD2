@@ -18,20 +18,23 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Setup Gradle 9.2.0
+      - name: Install Gradle 9.2.0
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '9.2.0'
 
-      - name: Check Gradle version
+      - name: Verify Gradle
         run: gradle --version
 
-      - name: Build mod
-        run: gradle build
+      - name: Build CART3R Mod
+        run: gradle build --stacktrace
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
+        if: success()
         with:
-          name: CART3R-MOD-JAR
+          name: CART3R-Civilizations-JAR
           path: build/libs/*.jar
+          if-no-files-found: error
           
+  
