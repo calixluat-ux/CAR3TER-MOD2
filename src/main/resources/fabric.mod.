@@ -1,0 +1,21 @@
+
+{
+  "schemaVersion": 1,
+  "id": "cart3r_civilizations",
+  "version": "${version}",
+  "name": "CART3R Civilizations",
+  "description": "AI-style NPC civilizations for Minecraft.",
+  "authors": ["CART3R"],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cart3r.CART3RCivilizations"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
