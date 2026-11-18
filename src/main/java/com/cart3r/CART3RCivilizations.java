@@ -1,4 +1,3 @@
-
 package com.cart3r;
 
 import net.fabricmc.api.ModInitializer;
@@ -10,7 +9,6 @@ public class CART3RCivilizations implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
         CommandRegistrationCallback.EVENT.register(
             (dispatcher, registryAccess, environment) -> {
                 dispatcher.register(
